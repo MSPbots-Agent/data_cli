@@ -2,14 +2,13 @@
 
 ## Overview
 
-This repository contains skills and datasets for MSPbots, designed to extend and automate workflows using custom skill scripts and assets.
+This repository provides dataset skills for MSPbots, designed to extend AI workflows with prebuilt skills and datasets.
 
-## Usage
+## Installation
+Installing mspbots-dataset Skill in Your AI IDE.
 
-Explore the `skills/` directory for available skills and datasets. Refer to the documentation in `skills/mspbots_dataset/references/ApiDocument.md` for API usage and integration details.
-
-### Installing a Skill in **Cursor** (Windows)
-In your project directory, run the following command in Command Prompt:
+### **Cursor** (Windows)
+Open Command Prompt in your project directory and run:
 
 ```cmd
 @echo off
@@ -31,8 +30,8 @@ echo Done.
 pause
 ```
 
-### Installing a Skill in **Claude Code** (Windows)
-In your project directory, run the following command in Command Prompt:
+### **Claude Code** (Windows)
+Open Command Prompt in your project directory and run:
 
 ```cmd
 @echo off
@@ -54,8 +53,8 @@ echo Done.
 pause
 ```
 
-### Installing a Skill in **Trae** (Windows)
-In your project directory, run the following command in Command Prompt:
+### **Trae** (Windows)
+Open Command Prompt in your project directory and run:
 
 ```cmd
 @echo off
@@ -79,14 +78,17 @@ pause
 
 ## Dependencies & Configuration
 
-- Requires MSPbots platform tenant\_code and token (see [user\_token.yaml](assets/user_token.yaml) example):
-  ```yaml
-  mspbots:
-      tenant_code: "your tenant_code"
-      token: "your mspbots token"
-  ```
+Requires MSPbots platform credentials (tenant code and token).
 
-## MSPbots Dataset Skill Folder Structure
+Example configuration (user_token.yaml):
+
+```yaml
+mspbots:
+    tenant_code: "your tenant_code"
+    token: "your mspbots token"
+```
+
+## MSPbots Dataset Skill Structure
 
 ```
 ├── skills
@@ -97,3 +99,9 @@ pause
 		  └── references/
 				└── ApiDocument.md
 ```
+
+## Directory Description:
+
+- SKILL.md – Skill documentation and usage guide.
+- assets/user_token.yaml – Configuration file storing your MSPbots tenant code and token.
+- references/ApiDocument.md – API reference and integration details.
