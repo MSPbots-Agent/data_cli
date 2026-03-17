@@ -86,11 +86,10 @@ pause
       token: "your mspbots token"
   ```
 
-## Folder Structure
+## MSPbots Dataset Skill Folder Structure
 
 ```
-├── README.md
-└── skills/
+├── skills
 	 └── mspbots_dataset/
 		  ├── SKILL.md
 		  ├── assets/
