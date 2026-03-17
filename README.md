@@ -18,7 +18,7 @@ Installing mspbots-dataset Skill in Your AI IDE.
 Run the command in the project directory:
 
 <details>
-<summary>**Powershell**</summary>
+<summary>Powershell</summary>
 
 ```powershell
 # Step 1: Check if .angets/skills directory exists
@@ -39,7 +39,7 @@ Read-Host "Press Enter to exit"
 </details>
 
 <details>
-<summary>**cmd**</summary>
+<summary>cmd</summary>
 
 ```cmd
 @echo off
@@ -59,7 +59,7 @@ pause
 </details>
 
 <details>
-<summary>**shell**</summary>
+<summary>Shell</summary>
 
 ```shell
 #!/bin/bash
@@ -85,7 +85,7 @@ read -p "Press Enter to exit"
 Open Command Prompt in your project directory and run:
 
 <details>
-<summary>**cmd**</summary>
+<summary>cmd</summary>
 
 ```cmd
 @echo off
@@ -108,11 +108,55 @@ pause
 ```
 </details>
 
+<details>
+<summary>Powershell</summary>
+
+```powershell
+# Step 1: Check if .claude/skills directory exists
+$dir = ".claude\skills"
+if (-Not (Test-Path $dir)) {
+    Write-Host "Creating directory $dir ..."
+    New-Item -ItemType Directory -Path $dir | Out-Null
+} else {
+    Write-Host "Directory $dir already exists."
+}
+# Step 2: Clone the repository branch
+Write-Host "Cloning skills/mspbots-dataset branch..."
+git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".claude\skills\mspbots_dataset"
+Write-Host "Done."
+# Pause (similar to cmd pause)
+Read-Host "Press Enter to exit"
+```
+</details>
+
+<details>
+<summary>shell</summary>
+
+```shell
+#!/bin/bash
+# Step 1: Check if .claude/skills directory exists
+DIR=".claude/skills"
+if [ ! -d "$DIR" ]; then
+echo "Creating directory $DIR ..."
+mkdir -p "$DIR"
+else
+echo "Directory $DIR already exists."
+fi
+# Step 2: Clone the repository branch
+TARGET_DIR=".claude/skills/mspbots_dataset"
+echo "Cloning skills/mspbots-dataset branch..."
+git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git "$TARGET_DIR"
+echo "Done."
+# Pause (optional, similar to cmd pause)
+read -p "Press Enter to exit"
+```
+</details>
+
 ### **Trae** (Windows)
 Open Command Prompt in your project directory and run:
 
 <details>
-<summary>**cmd**</summary>
+<summary>cmd</summary>
 
 ```cmd
 @echo off
@@ -132,6 +176,50 @@ git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_reposit
 
 echo Done.
 pause
+```
+</details>
+
+<details>
+<summary>Powershell</summary>
+
+```powershell
+# Step 1: Check if .trae/skills directory exists
+$dir = ".trae\skills"
+if (-Not (Test-Path $dir)) {
+    Write-Host "Creating directory $dir ..."
+    New-Item -ItemType Directory -Path $dir | Out-Null
+} else {
+    Write-Host "Directory $dir already exists."
+}
+# Step 2: Clone the repository branch
+Write-Host "Cloning skills/mspbots-dataset branch..."
+git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".trae\skills\mspbots_dataset"
+Write-Host "Done."
+# Pause (similar to cmd pause)
+Read-Host "Press Enter to exit"
+```
+</details>
+
+<details>
+<summary>shell</summary>
+
+```shell
+#!/bin/bash
+# Step 1: Check if .trae/skills directory exists
+DIR=".trae/skills"
+if [ ! -d "$DIR" ]; then
+echo "Creating directory $DIR ..."
+mkdir -p "$DIR"
+else
+echo "Directory $DIR already exists."
+fi
+# Step 2: Clone the repository branch
+TARGET_DIR=".trae/skills/mspbots_dataset"
+echo "Cloning skills/mspbots-dataset branch..."
+git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git "$TARGET_DIR"
+echo "Done."
+# Pause (optional, similar to cmd pause)
+read -p "Press Enter to exit"
 ```
 </details>
 
