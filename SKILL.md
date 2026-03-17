@@ -32,7 +32,7 @@ Users must first provide the tenant_code and token from the MSPbots platform bef
 ### 1. search_dataset_via_rag
 Search existing datasets on MSPbots platform using natural language.
 
-**API Endpoint**: POST https://owlstg.mspbots.ai/owl-agent/api/v1/search_dataset_via_rag
+**API Endpoint**: `POST https://owlstg.mspbots.ai/owl-agent/api/v1/search_dataset_via_rag`
 
 **Parameters**:
 - mspbots_token (optional): MSPbots authentication token
@@ -57,7 +57,7 @@ curl --location 'https://owlstg.mspbots.ai/owl-agent/api/v1/search_dataset_via_r
 ### 2. generate_dataset_via_chat
 If no suitable dataset is found, automatically create one via chat.
 
-**API Endpoint**: POST https://owlstg.mspbots.ai/owl-agent/api/v1/generate_dataset_via_chat
+**API Endpoint**: `POST https://owlstg.mspbots.ai/owl-agent/api/v1/generate_dataset_via_chat`
 
 **Parameters**:
 - mspbots_token (optional): MSPbots authentication token
@@ -82,7 +82,7 @@ curl --location 'https://owlstg.mspbots.ai/owl-agent/api/v1/generate_dataset_via
 ### 3. dataset_data_preview
 Get a preview of the data content for a specified dataset.
 
-**API Endpoint**: GET https://app.mspbots.ai/web/query/sys/dataset/{datasetId}/data
+**API Endpoint**: `GET https://app.mspbots.ai/web/query/sys/dataset/{datasetId}/data`
 
 ### Request Example
 
