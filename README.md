@@ -4,6 +4,13 @@
 
 This repository provides dataset skills for MSPbots, designed to extend AI workflows with prebuilt skills and datasets.
 
+## Skills
+
+**mspbots-dataset**: This skill is used to `search`, `create`, and `preview` datasets on the MSPbots platform. It supports:
+- Natural language search for datasets
+- Automatic dataset creation via chat instructions
+- Data preview to inspect dataset contents
+
 ## Installation
 Installing mspbots-dataset Skill in Your AI IDE.
 
