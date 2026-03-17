@@ -8,9 +8,8 @@ This repository contains skills and datasets for MSPbots, designed to extend and
 
 Explore the `skills/` directory for available skills and datasets. Refer to the documentation in `skills/mspbots_dataset/references/ApiDocument.md` for API usage and integration details.
 
-### Installing Skill in **Cursor**
-
-Run the following cmd command in your project to install the mspbots-dataset skill.
+### Installing a Skill in **Cursor** (Windows)
+In your project directory, run the following command in Command Prompt:
 
 ```cmd
 @echo off
@@ -32,7 +31,8 @@ echo Done.
 pause
 ```
 
-### Installing Skill in **Claude Code**
+### Installing a Skill in **Claude Code** (Windows)
+In your project directory, run the following command in Command Prompt:
 
 ```cmd
 @echo off
@@ -54,7 +54,8 @@ echo Done.
 pause
 ```
 
-### Installing Skill in **Trae**
+### Installing a Skill in **Trae** (Windows)
+In your project directory, run the following command in Command Prompt:
 
 ```cmd
 @echo off
