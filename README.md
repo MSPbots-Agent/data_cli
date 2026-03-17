@@ -21,8 +21,8 @@ Run the command in the project directory:
 <summary>Powershell</summary>
 
 ```powershell
-# Step 1: Check if .angets/skills directory exists
-$dir = ".angets\skills"
+# Step 1: Check if .cursor/skills directory exists
+$dir = ".cursor\skills"
 if (-Not (Test-Path $dir)) {
     Write-Host "Creating directory $dir ..."
     New-Item -ItemType Directory -Path $dir | Out-Null
@@ -31,7 +31,7 @@ if (-Not (Test-Path $dir)) {
 }
 # Step 2: Clone the repository branch
 Write-Host "Cloning skills/mspbots-dataset branch..."
-git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".angets\skills\mspbots_dataset"
+git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".cursor\skills\mspbots_dataset"
 Write-Host "Done."
 # Pause (similar to cmd pause)
 Read-Host "Press Enter to exit"
@@ -43,16 +43,16 @@ Read-Host "Press Enter to exit"
 
 ```cmd
 @echo off
-REM Step 1: Check if .angets/skills directory exists
-if not exist ".angets\skills" (
-    echo Creating directory .angets\skills ...
-    mkdir ".angets\skills"
+REM Step 1: Check if .cursor/skills directory exists
+if not exist ".cursor\skills" (
+    echo Creating directory .cursor\skills ...
+    mkdir ".cursor\skills"
 ) else (
-    echo Directory .angets\skills already exists.
+    echo Directory .cursor\skills already exists.
 )
 REM Step 2: Clone the repository branch
 echo Cloning skills/mspbots-dataset branch...
-git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".angets\skills\mspbots_dataset"
+git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".cursor\skills\mspbots_dataset"
 echo Done.
 pause
 ```
@@ -63,8 +63,8 @@ pause
 
 ```shell
 #!/bin/bash
-# Step 1: Check if .angets/skills directory exists
-DIR=".angets/skills"
+# Step 1: Check if .cursor/skills directory exists
+DIR=".cursor/skills"
 if [ ! -d "$DIR" ]; then
 echo "Creating directory $DIR ..."
 mkdir -p "$DIR"
@@ -72,7 +72,7 @@ else
 echo "Directory $DIR already exists."
 fi
 # Step 2: Clone the repository branch
-TARGET_DIR=".angets/skills/mspbots_dataset"
+TARGET_DIR=".cursor/skills/mspbots_dataset"
 echo "Cloning skills/mspbots-dataset branch..."
 git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git "$TARGET_DIR"
 echo "Done."
