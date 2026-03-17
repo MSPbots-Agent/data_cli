@@ -81,7 +81,7 @@ read -p "Press Enter to exit"
 ```
 </details>
 
-### **Claude Code** (Windows)
+### **Claude Code** 
 Open Command Prompt in your project directory and run:
 
 <details>
@@ -152,7 +152,7 @@ read -p "Press Enter to exit"
 ```
 </details>
 
-### **Trae** (Windows)
+### **Trae**
 Open Command Prompt in your project directory and run:
 
 <details>
