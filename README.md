@@ -17,25 +17,58 @@ Installing mspbots-dataset Skill in Your AI IDE.
 ### **Cursor** (Windows)
 Open Command Prompt in your project directory and run:
 
-```cmd
-@echo off
-
-REM Step 1: Check if .angets/skills directory exists
-if not exist ".angets\skills" (
-    echo Creating directory .angets\skills ...
-    mkdir ".angets\skills"
-) else (
-    echo Directory .angets\skills already exists.
-)
-
-REM Step 2: Clone the repository branch
-echo Cloning skills/mspbots-dataset branch...
-
-git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".angets\skills\mspbots_dataset"
-
-echo Done.
-pause
-```
+- **Powershell**
+    ```powershell
+    # Step 1: Check if .angets/skills directory exists
+    $dir = ".angets\skills"
+    if (-Not (Test-Path $dir)) {
+        Write-Host "Creating directory $dir ..."
+        New-Item -ItemType Directory -Path $dir | Out-Null
+    } else {
+        Write-Host "Directory $dir already exists."
+    }
+    # Step 2: Clone the repository branch
+    Write-Host "Cloning skills/mspbots-dataset branch..."
+    git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".angets\skills\mspbots_dataset"
+    Write-Host "Done."
+    # Pause (similar to cmd pause)
+    Read-Host "Press Enter to exit"
+    ```
+- **cmd**
+    ```cmd
+    @echo off
+    REM Step 1: Check if .angets/skills directory exists
+    if not exist ".angets\skills" (
+        echo Creating directory .angets\skills ...
+        mkdir ".angets\skills"
+    ) else (
+        echo Directory .angets\skills already exists.
+    )
+    REM Step 2: Clone the repository branch
+    echo Cloning skills/mspbots-dataset branch...
+    git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".angets\skills\mspbots_dataset"
+    echo Done.
+    pause
+    ```
+- **shell**
+    ```shell
+    #!/bin/bash
+    # Step 1: Check if .angets/skills directory exists
+    DIR=".angets/skills"
+    if [ ! -d "$DIR" ]; then
+    echo "Creating directory $DIR ..."
+    mkdir -p "$DIR"
+    else
+    echo "Directory $DIR already exists."
+    fi
+    # Step 2: Clone the repository branch
+    TARGET_DIR=".angets/skills/mspbots_dataset"
+    echo "Cloning skills/mspbots-dataset branch..."
+    git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git "$TARGET_DIR"
+    echo "Done."
+    # Pause (optional, similar to cmd pause)
+    read -p "Press Enter to exit"
+    ```
 
 ### **Claude Code** (Windows)
 Open Command Prompt in your project directory and run:
