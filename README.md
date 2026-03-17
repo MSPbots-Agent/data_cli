@@ -14,26 +14,32 @@ This repository provides dataset skills for MSPbots, designed to extend AI workf
 ## Installation
 Installing mspbots-dataset Skill in Your AI IDE.
 
-### **Cursor** (Windows)
+### **Cursor**
 Open Command Prompt in your project directory and run:
 
-- **Powershell**
-    ```powershell
-    # Step 1: Check if .angets/skills directory exists
-    $dir = ".angets\skills"
-    if (-Not (Test-Path $dir)) {
-        Write-Host "Creating directory $dir ..."
-        New-Item -ItemType Directory -Path $dir | Out-Null
-    } else {
-        Write-Host "Directory $dir already exists."
-    }
-    # Step 2: Clone the repository branch
-    Write-Host "Cloning skills/mspbots-dataset branch..."
-    git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".angets\skills\mspbots_dataset"
-    Write-Host "Done."
-    # Pause (similar to cmd pause)
-    Read-Host "Press Enter to exit"
-    ```
+
+<details>
+<summary>Powershell</summary>
+
+```powershell
+# Step 1: Check if .angets/skills directory exists
+$dir = ".angets\skills"
+if (-Not (Test-Path $dir)) {
+    Write-Host "Creating directory $dir ..."
+    New-Item -ItemType Directory -Path $dir | Out-Null
+} else {
+    Write-Host "Directory $dir already exists."
+}
+# Step 2: Clone the repository branch
+Write-Host "Cloning skills/mspbots-dataset branch..."
+git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".angets\skills\mspbots_dataset"
+Write-Host "Done."
+# Pause (similar to cmd pause)
+Read-Host "Press Enter to exit"
+```
+
+</details>
+    
 - **cmd**
     ```cmd
     @echo off
