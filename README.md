@@ -31,7 +31,7 @@ if (-Not (Test-Path $dir)) {
 }
 # Step 2: Clone the repository branch
 Write-Host "Cloning skills/mspbots-dataset branch..."
-git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".angets\skills\mspbots-dataset"
+git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".cursor\skills\mspbots-dataset"
 Write-Host "MSPbots Dataset Skill installation is complete."
 ```
 </details>
