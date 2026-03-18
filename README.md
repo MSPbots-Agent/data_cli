@@ -211,7 +211,7 @@ echo "MSPbots Dataset Skill installation is complete."
 ```
 </details>
 
-### **Copilot - Visual Studio Code**
+### Copilot in Visual Studio Code, Antigravity, and Others
 Run the command in the project directory:
 
 <details open>
