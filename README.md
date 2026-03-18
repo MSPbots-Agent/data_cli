@@ -21,8 +21,8 @@ Run the command in the project directory:
 <summary>Powershell</summary>
 
 ```powershell
-# Step 1: Check if .angets/skills directory exists
-$dir = ".angets\skills"
+# Step 1: Check if .cursor/skills directory exists
+$dir = ".cursor\skills"
 if (-Not (Test-Path $dir)) {
     Write-Host "Creating directory $dir ..."
     New-Item -ItemType Directory -Path $dir | Out-Null
@@ -41,12 +41,12 @@ Write-Host "MSPbots Dataset Skill installation is complete."
 
 ```cmd
 @echo off
-REM Step 1: Check if .angets/skills directory exists
-if not exist ".angets\skills" (
-    echo Creating directory .angets\skills ...
-    mkdir ".angets\skills"
+REM Step 1: Check if .cursor/skills directory exists
+if not exist ".cursor\skills" (
+    echo Creating directory .cursor\skills ...
+    mkdir ".cursor\skills"
 ) else (
-    echo Directory .angets\skills already exists.
+    echo Directory .cursor\skills already exists.
 )
 REM Step 2: Clone the repository branch
 echo Cloning skills/mspbots-dataset branch...
@@ -61,8 +61,8 @@ pause
 
 ```shell
 #!/bin/bash
-# Step 1: Check if .angets/skills directory exists
-DIR=".angets/skills"
+# Step 1: Check if .cursor/skills directory exists
+DIR=".cursor/skills"
 if [ ! -d "$DIR" ]; then
 echo "Creating directory $DIR ..."
 mkdir -p "$DIR"
