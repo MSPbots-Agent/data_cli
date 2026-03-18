@@ -50,7 +50,7 @@ if not exist ".cursor\skills" (
 )
 REM Step 2: Clone the repository branch
 echo Cloning skills/mspbots-dataset branch...
-git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".angets\skills\mspbots-dataset"
+git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git ".cursor\skills\mspbots-dataset"
 echo Done.
 pause
 ```
@@ -70,7 +70,7 @@ else
 echo "Directory $DIR already exists."
 fi
 # Step 2: Clone the repository branch
-TARGET_DIR=".angets/skills/mspbots-dataset"
+TARGET_DIR=".cursor/skills/mspbots-dataset"
 echo "Cloning skills/mspbots-dataset branch..."
 git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/skills_repository.git "$TARGET_DIR"
 echo "MSPbots Dataset Skill installation is complete."
