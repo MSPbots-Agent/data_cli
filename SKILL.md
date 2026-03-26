@@ -17,14 +17,10 @@ This skill is used to search, create datasets, and preview data content on the M
 
 ## Dependencies & Configuration
 
-Users must first provide the tenant_code and token from the MSPbots platform before you can update the user configuration and proceed with the next steps.
+Users must first provide the token from the MSPbots platform before you can update the user configuration and proceed with the next steps.
 
-- Requires MSPbots platform tenant_code and token (see [user_token.yaml](assets/user_token.yaml) example):
-    ```yaml
-    mspbots:
-        tenant_code: "your tenant_code"
-        token: "your token"
-    ```
+- Requires MSPbots platform token (see [mspbots.token](assets/mspbots.token) example):
+
 - See [ApiDocument.md](references/ApiDocument.md) for detailed API documentation.
 
 ## Main Tools & Interfaces
@@ -36,7 +32,6 @@ Search existing datasets on MSPbots platform using natural language.
 
 **Parameters**:
 - mspbots_token (optional): MSPbots authentication token
-- tenant_code (required): Tenant identifier
 - requirements (required): Natural language description of dataset requirements
 - top_k (optional): Number of results to return
 
@@ -47,7 +42,6 @@ Example:
 curl --location 'https://owlstg.mspbots.ai/owl-agent/api/v1/search_dataset_via_rag' \
 --header 'Content-Type: application/json' \
 --data '{
-    "tenant_code": "your tenant_code",
     "mspbots_token": "your token",
     "requirements": "Leo Yang Teams dataset email",
     "top_k": 5
@@ -61,7 +55,6 @@ If no suitable dataset is found, automatically create one via chat.
 
 **Parameters**:
 - mspbots_token (optional): MSPbots authentication token
-- tenant_code (required): Tenant identifier
 - chat (required): Natural language instruction for dataset creation
 - thread_id (optional): Conversation thread ID for continuity
 
@@ -73,7 +66,6 @@ curl --location 'https://owlstg.mspbots.ai/owl-agent/api/v1/generate_dataset_via
 --header 'Content-Type: application/json' \
 --data '{
     "mspbots_token": "your token", 
-    "tenant_code": "your tenant_code",
     "chat": "Hello",
     "thread_id": "221cdcc9-2943-413d-9da6-c7164ee7243d"
 }'
@@ -111,20 +103,17 @@ GET https://app.mspbots.ai/web/query/sys/dataset/2010931613545922561/data?filter
 | Name           | Required | Description                | Example                        |
 |----------------|----------|----------------------------|--------------------------------|
 | token          | Yes      | User login token           | 53ae9a8d48833421c8e9e1d97748f8ef |
-| tenantcode     | Yes      | Tenant ID                  | 1812750989720203265            |
 
 **Required headers:**
 
 - token
-- tenantcode
 
 **Returns**: List of data records, total count, and pagination info
 
 Request Example:
 ```bash
 curl --location 'https://app.mspbots.ai/web/query/sys/dataset/1478973401475702786/data?filter=teams_mail%20ilike%20%27%25leo%25%27&size=10&current=1' \
---header 'token: your token' \
---header 'tenantcode: your tenant_code'
+--header 'token: your token' 
 ```
 
 ## Workflow Description
@@ -137,7 +126,7 @@ API error response format:
 ```json
 {
   "ok": false,
-  "error": "Invalid tenant_code"
+  "error": "Invalid token"
 }
 ```
 
@@ -150,4 +139,4 @@ HTTP Status Codes:
 ## References
 - [Detailed API Documentation](references/ApiDocument.md)
 - [Owl API Docs](https://owlstg.mspbots.ai/owl-agent/api/v1)
-- [Token Configuration Example](assets/user_token.yaml)
+- [Token Configuration Example](assets/mspbots.token)
