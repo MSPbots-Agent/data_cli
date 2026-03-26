@@ -235,14 +235,12 @@ Write-Host "MSPbots Dataset Skill installation is complete."
 
 ## Dependencies & Configuration
 
-Requires MSPbots platform credentials (tenant code and token).
+Requires MSPbots platform credentials (token).
 
-Example configuration (user_token.yaml):
+Example configuration (mspbots.token):
 
 ```yaml
-mspbots:
-    tenant_code: "your tenant_code"
-    token: "your mspbots token"
+mspbots_token: "your mspbots token"
 ```
 
 ## MSPbots Dataset Skill Structure
@@ -260,5 +258,5 @@ mspbots:
 ## Directory Description:
 
 - SKILL.md – Skill documentation and usage guide.
-- assets/user_token.yaml – Configuration file storing your MSPbots tenant code and token.
+- assets/mspbots.token – Configuration file storing your MSPbots token.
 - references/ApiDocument.md – API reference and integration details.
