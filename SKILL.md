@@ -138,5 +138,5 @@ HTTP Status Codes:
 
 ## References
 - [Detailed API Documentation](references/ApiDocument.md)
-- [Owl API Docs](https://owlstg.mspbots.ai/owl-agent/api/v1)
+- [Owl API Docs](https://owlstg.mspbots.ai/owl-agent/api/docs)
 - [Token Configuration Example](assets/mspbots.token)
