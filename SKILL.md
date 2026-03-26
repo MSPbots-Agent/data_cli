@@ -6,11 +6,9 @@ description: This skill is used to search, create datasets, and preview data con
 # MSPbots Dataset Skill
 ## Skill Metadata
 - Author: Leo
-- Version: 1.0.0
+- Version: 1.0.1
 - Tags: dataset, MSPbots, data query, creation
-- Language: Python, JavaScript
-- Required Assets: assets/user_token.yaml
-- API Reference: references/ApiDocument.md
+- Required Assets: assets/mspbots.token
 
 ## Introduction
 This skill is used to search, create datasets, and preview data content on the MSPbots platform. It supports natural language search, automatic dataset creation, and data preview.
@@ -20,8 +18,6 @@ This skill is used to search, create datasets, and preview data content on the M
 Users must first provide the token from the MSPbots platform before you can update the user configuration and proceed with the next steps.
 
 - Requires MSPbots platform token (see [mspbots.token](assets/mspbots.token) example):
-
-- See [ApiDocument.md](references/ApiDocument.md) for detailed API documentation.
 
 ## Main Tools & Interfaces
 
@@ -137,6 +133,5 @@ HTTP Status Codes:
 - 500: Internal server error
 
 ## References
-- [Detailed API Documentation](references/ApiDocument.md)
 - [Owl API Docs](https://owlstg.mspbots.ai/owl-agent/api/docs)
-- [Token Configuration Example](assets/mspbots.token)
+- [Token Configuration](assets/mspbots.token)
