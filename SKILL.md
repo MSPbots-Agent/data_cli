@@ -6,18 +6,23 @@ description: This skill is used to search, create datasets, and preview data con
 # MSPbots Dataset Skill
 ## Skill Metadata
 - Author: Leo
-- Version: 1.0.1
+- Version: 1.0.2
 - Tags: dataset, MSPbots, data query, creation
-- Required Assets: assets/mspbots.token
+- Required Config: config/config.yml
 
 ## Introduction
 This skill is used to search, create datasets, and preview data content on the MSPbots platform. It supports natural language search, automatic dataset creation, and data preview.
 
 ## Dependencies & Configuration
 
-Users must first provide the token from the MSPbots platform before you can update the user configuration and proceed with the next steps.
+Users must first provide the token from the MSPbots platform in `config/config.yml` before you can update the user configuration and proceed with the next steps.
 
-- Requires MSPbots platform token (see [mspbots.token](assets/mspbots.token) example):
+- Requires MSPbots platform token (see [config.yml](config/config.yml) example):
+
+```yml
+mspbots:
+  token: your_mspbots_token
+```
 
 ## Main Tools & Interfaces
 
@@ -27,9 +32,11 @@ Search existing datasets on MSPbots platform using natural language.
 **API Endpoint**: `POST https://owlstg.mspbots.ai/owl-agent/api/v1/search_dataset_via_rag`
 
 **Parameters**:
-- mspbots_token (optional): MSPbots authentication token
 - requirements (required): Natural language description of dataset requirements
 - top_k (optional): Number of results to return
+
+**Header Parameters**:
+- token (required): MSPbots authentication token
 
 **Returns**: List of datasets and their basic information
 
@@ -37,8 +44,8 @@ Example:
 ```bash
 curl --location 'https://owlstg.mspbots.ai/owl-agent/api/v1/search_dataset_via_rag' \
 --header 'Content-Type: application/json' \
+--header 'token: your token' \
 --data '{
-    "mspbots_token": "your token",
     "requirements": "Leo Yang Teams dataset email",
     "top_k": 5
 }'
@@ -50,9 +57,11 @@ If no suitable dataset is found, automatically create one via chat.
 **API Endpoint**: `POST https://owlstg.mspbots.ai/owl-agent/api/v1/generate_dataset_via_chat`
 
 **Parameters**:
-- mspbots_token (optional): MSPbots authentication token
 - chat (required): Natural language instruction for dataset creation
 - thread_id (optional): Conversation thread ID for continuity
+
+**Header Parameters**:
+- token (required): MSPbots authentication token
 
 **Returns**: Detailed information of the newly created dataset
 
@@ -60,8 +69,8 @@ Example:
 ```bash
 curl --location 'https://owlstg.mspbots.ai/owl-agent/api/v1/generate_dataset_via_chat' \
 --header 'Content-Type: application/json' \
+--header 'token: your token' \
 --data '{
-    "mspbots_token": "your token", 
     "chat": "Hello",
     "thread_id": "221cdcc9-2943-413d-9da6-c7164ee7243d"
 }'
@@ -134,4 +143,4 @@ HTTP Status Codes:
 
 ## References
 - [Owl API Docs](https://owlstg.mspbots.ai/owl-agent/api/docs)
-- [Token Configuration](assets/mspbots.token)
+- [Token Configuration](config/config.yml)
