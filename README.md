@@ -14,6 +14,43 @@ This repository provides dataset skills for MSPbots, designed to extend AI workf
 ## Installation
 Installing mspbots-dataset Skill in Your AI IDE.
 
+### Recommended: Install with `npx`
+Run the command in your project directory:
+
+```bash
+npx mspbots-data-cli install -cursor
+npx mspbots-data-cli install -claude
+npx mspbots-data-cli install -trae
+npx mspbots-data-cli install -others
+```
+
+Aliases supported by the installer:
+- `claude-code`: same as `-claude`
+- `others`: includes Codex, VS Code, Copilot, Antigravity, and similar IDEs
+- `agents`: same as `-others`
+- `codex`: same as `-others`
+- `vscode`: same as `-others`
+- `copilot`: same as `-others`
+- `antigravity`: same as `-others`
+
+Optional custom project path:
+
+```bash
+npx mspbots-data-cli install -cursor --dir /path/to/your/project
+```
+
+The installer will:
+- create the target `skills` directory if it does not exist
+- reinstall `mspbots-dataset` from the `skills/mspbots-dataset` branch
+- remove the cloned `.git` directory after installation
+
+Requirements:
+- Node.js 18+
+- Git
+
+### Manual Git Installation
+If you prefer not to use `npx`, the original manual installation steps are below.
+
 ### **Cursor**
 Run the command in the project directory:
 
@@ -237,26 +274,14 @@ Write-Host "MSPbots Dataset Skill installation is complete."
 
 Requires MSPbots platform credentials (token).
 
-Example configuration (mspbots.token):
+Example configuration (`config/config.yml`):
 
 ```yaml
-mspbots_token: "your mspbots token"
-```
-
-## MSPbots Dataset Skill Structure
-
-```
-├── skills
-	 └── mspbots-dataset/
-		  ├── SKILL.md
-		  ├── assets/
-		  │   └── user_token.yaml
-		  └── references/
-				└── ApiDocument.md
+mspbots:
+  token: "your_mspbots_token"
 ```
 
 ## Directory Description:
 
 - SKILL.md – Skill documentation and usage guide.
-- assets/mspbots.token – Configuration file storing your MSPbots token.
-- references/ApiDocument.md – API reference and integration details.
+- config/config.yml – Configuration file storing your MSPbots token.
