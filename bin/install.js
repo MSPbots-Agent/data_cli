@@ -9,7 +9,7 @@ const SKILL_NAME = "mspbots-dataset";
 const DEFAULT_BRANCH = process.env.MSPBOTS_SKILL_BRANCH || "skills/mspbots-dataset";
 const DEFAULT_REPO =
   process.env.MSPBOTS_SKILL_REPO ||
-  "https://gitlab.mspbots.ai/owl/skills_repository.git";
+  "https://github.com/MSPbots-Agent/data_cli.git";
 
 const TARGETS = {
   cursor: ".cursor/skills",
