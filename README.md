@@ -22,7 +22,7 @@ Please follow the steps below strictly:
    Target path: [...]/skills/mspbots-dataset
 
    Run the following command:
-   git clone -b skills/mspbots-dataset https://gitlab.mspbots.ai/owl/data_cli_repository.git [...]/skills/mspbots-dataset
+   git clone -b skills/mspbots-dataset https://github.com/MSPbots-Agent/data_cli.git [...]/skills/mspbots-dataset
 
 3. If the target directory already exists:
    - Do not clone again
