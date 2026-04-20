@@ -14,4 +14,6 @@ Your task is to install the DataCli Skill into the current project and ensure it
 
 Use the "INSTALL SKILL" skill to install for this project. Install only for the current project.
 Skill location: git clone -b skills/mspbots-dataset https://github.com/MSPbots-Agent/data_cli.git mspbots-dataset
+
+After the SKILL is successfully installed, please ask the user if they want to authorize mspbots-dataset. The SKILL can only be used properly after authorization.
 ```
