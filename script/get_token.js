@@ -5,7 +5,7 @@ const path = require("path");
 const crypto = require("crypto");
 const { exec } = require("child_process");
 
-const AUTH_PAGE_URL_TEMPLATE = "https://app.mspbots.ai/datacli-auth?code={code}";
+const AUTH_PAGE_URL_TEMPLATE = "https://app.mspbots.ai/auth-data-cli?code={code}";
 const TOKEN_URL_TEMPLATE = "https://owlstg.mspbots.ai//owl-agent/api/v1/auth_token/{code}";
 const MAX_RETRIES = 60;
 const POLL_INTERVAL_MS = 1000;
