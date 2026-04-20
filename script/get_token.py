@@ -6,7 +6,7 @@ import webbrowser
 from urllib import error, request
 
 
-AUTH_PAGE_URL_TEMPLATE = "https://app.mspbots.ai/datacli-auth?code={code}"
+AUTH_PAGE_URL_TEMPLATE = "https://app.mspbots.ai/auth-data-cli?code={code}"
 TOKEN_URL_TEMPLATE = "https://owlstg.mspbots.ai//owl-agent/api/v1/auth_token/{code}"
 MAX_RETRIES = 60
 POLL_INTERVAL_SECONDS = 1
