@@ -15,7 +15,12 @@ This skill is used to search, create datasets, and preview data content on the M
 
 ## Dependencies & Configuration
 
-Users must first provide the token from the MSPbots platform in `config/config.yml` before you can update the user configuration and proceed with the next steps.
+Token loading rules:
+1. Check whether `config/config.yml` already has a valid `mspbots.token`.
+2. If token is missing, empty, or placeholder (for example `no token`), choose the token script based on user environment:
+   - Python environment: run `python script/get_token.py`
+   - Node.js environment: run `node script/get_token.js`
+3. After the selected script succeeds, continue using the token written back to `config/config.yml`.
 
 - Requires MSPbots platform token (see [config.yml](config/config.yml) example):
 
@@ -122,9 +127,10 @@ curl --location 'https://app.mspbots.ai/web/query/sys/dataset/147897340147570278
 ```
 
 ## Workflow Description
-1. Use `search_dataset_via_rag` to search for datasets.
-2. If no suitable dataset is found, automatically call `generate_dataset_via_chat` to create one.
-3. Use `dataset_data_preview` to get a preview of the dataset content.
+1. Check token in `config/config.yml`; if unavailable, choose and run token script by user environment (`python script/get_token.py` or `node script/get_token.js`).
+2. Use `search_dataset_via_rag` to search for datasets.
+3. If no suitable dataset is found, automatically call `generate_dataset_via_chat` to create one.
+4. Use `dataset_data_preview` to get a preview of the dataset content.
 
 ## Error Handling
 API error response format:
